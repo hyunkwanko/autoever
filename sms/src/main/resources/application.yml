@@ -1,2 +1,7 @@
 server:
   port: 8082
+
+sms:
+  auth:
+    username: autoever
+    password: 5678

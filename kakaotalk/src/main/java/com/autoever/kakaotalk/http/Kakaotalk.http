@@ -1,0 +1,19 @@
+### 카카오톡 메시지 발송 (성공)
+POST http://localhost:8081/kakaotalk-messages
+Authorization: Basic YXV0b2V2ZXI6MTIzNA==
+Content-Type: application/json
+
+{
+  "phone": "010-1234-5678",
+  "message": "카카오톡님, 안녕하세요. 현대 오토에버입니다."
+}
+
+### 카카오톡 메시지 발송 (인증 실패)
+POST http://localhost:8081/kakaotalk-messages
+Authorization: Basic d3Jvbmc6dXNlcg==
+Content-Type: application/json
+
+{
+  "phone": "010-1234-5678",
+  "message": "카카오톡 인증 실패입니다."
+}
