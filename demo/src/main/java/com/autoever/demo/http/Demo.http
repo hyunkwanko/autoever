@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ### 3. 본인 상세정보 조회 (주소는 시/도까지만)
 GET http://localhost:8080/api/users/me
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTc1NTQwMDM1MiwiZXhwIjoxNzU1NDAzOTUyfQ.TMeW0NqDF3W_jya9pl6iKOcKb1u9YMqVkd9nmymBjs8
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTc1NTQzNTQ3MywiZXhwIjoxNzU1NDM5MDczfQ.IATlIB35wuJ6kv4Y02zvNL_ZzmifHk7qYTHT_tmuaZo
 
 ### 4. 관리자 회원 조회 (Pagination)
 GET http://localhost:8080/api/admin/users?page=20&size=10

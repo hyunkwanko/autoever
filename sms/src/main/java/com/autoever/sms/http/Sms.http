@@ -1,17 +1,9 @@
 ### SMS 발송 (성공)
-POST http://localhost:8082/sms?phone=010-9876-5432
+POST http://localhost:8082/sms?phone=01012345678&message=테스트메시지
 Authorization: Basic YXV0b2V2ZXI6NTY3OA==
-Content-Type: application/json
-
-{
-  "message": "문자님, 안녕하세요. 현대 오토에버입니다."
-}
+Content-Type: application/x-www-form-urlencoded
 
 ### SMS 발송 (인증 실패)
-POST http://localhost:8082/sms?phone=010-9876-5432
-Authorization: Basic d3Jvbmc6dXNlcg==
-Content-Type: application/json
-
-{
-  "message": "SMS 인증 실패입니다."
-}
+POST http://localhost:8082/sms?phone=01098765432&message=실패테스트
+Authorization: Basic d3Jvbmc6dXNlcjoxMjM0
+Content-Type: application/x-www-form-urlencoded
