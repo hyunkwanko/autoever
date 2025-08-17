@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+    sql:
+      init:
+        mode: always
+  h2:
+    console:
+      enabled: true
+
+jwt:
+  secret: 9a8b7c6d5e4f3g2h1i0j9k8l7m6n5o4p
+  expiration: 3600000 # 1??
+
+external:
+  auth:
+    username: autoever
+    kakao: 1234
+    sms: 5678
