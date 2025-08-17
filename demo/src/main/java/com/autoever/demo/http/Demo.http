@@ -1,0 +1,53 @@
+### 1. 회원가입
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+
+{
+  "username": "user3",
+  "password": "pass123",
+  "name": "홍길동",
+  "ssn": "9404231111113",
+  "phone": "01012345678",
+  "address": "부산광역시 2123 강남구 역삼동"
+}
+
+### 2. 로그인 (사용자)
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+  "username": "user3",
+  "password": "pass123"
+}
+
+### 3. 본인 상세정보 조회 (주소는 시/도까지만)
+GET http://localhost:8080/api/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImlhdCI6MTc1NTQwMDM1MiwiZXhwIjoxNzU1NDAzOTUyfQ.TMeW0NqDF3W_jya9pl6iKOcKb1u9YMqVkd9nmymBjs8
+
+### 4. 관리자 회원 조회 (Pagination)
+GET http://localhost:8080/api/admin/users?page=20&size=10
+Authorization: Basic admin 1212
+
+### 5. 관리자 회원 수정 (암호와 주소 동시 변경)
+PATCH http://localhost:8080/api/admin/users/201
+Authorization: Basic admin 1212
+Content-Type: application/json
+
+{
+  "password": "pass123",
+  "address": "경기도 성남시 분당구"
+}
+
+### 6. 관리자 회원 삭제
+DELETE http://localhost:8080/api/admin/users/201
+Authorization: Basic admin 1212
+
+### 7. 연령대별 카카오톡 메시지 발송
+POST http://localhost:8080/api/admin/messages
+Authorization: Basic admin 1212
+Content-Type: application/json
+
+{
+  "ageGroup": "40",
+  "message": "이번 주말 시승 이벤트에 초대합니다!"
+}
