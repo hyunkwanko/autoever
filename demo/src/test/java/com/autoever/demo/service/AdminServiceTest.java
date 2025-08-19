@@ -121,13 +121,13 @@ class AdminServiceTest {
         User user20 = User.builder()
                 .id(1L).name("철수").phone("010-1111-2222")
                 .username("user1")
-                .ssn("000101-3123456") // ✅ 2000년생, 남자 (genderCode=3)
+                .ssn("000101-3123456")
                 .build();
 
         User user30 = User.builder()
                 .id(2L).name("영희").phone("010-3333-4444")
                 .username("user2")
-                .ssn("900101-2123456") // ✅ 1990년생, 여자 (genderCode=2)
+                .ssn("900101-2123456")
                 .build();
 
         when(userRepository.findAll()).thenReturn(List.of(user20, user30));
